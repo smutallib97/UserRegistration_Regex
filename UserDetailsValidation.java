@@ -44,9 +44,9 @@ public class UserDetailsValidation {
             System.out.println("Invalid");
         }
     }
-    //Password - Rule2: Should have at least 1 numeric number
+    //Password - Rule4: Should have at least 1 Special Character
     public static void isValidPassword(String password) {
-        String regex = "\"^[a-z](?=.*[A-Z]+)(?=.*[0-9]+).{8,}$\"";
+        String regex = "^[0-9a-zA-Z!,@#$&*().]{8,}$\"";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         if (matcher.matches()) {
