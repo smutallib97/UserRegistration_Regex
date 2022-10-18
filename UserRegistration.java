@@ -13,6 +13,7 @@ public class UserRegistration extends UserDetailsValidation {
         userEmail();
         userMobileNumber();
         userPassword();
+        isValidAllEmail();
 
     }
 
@@ -40,7 +41,7 @@ public class UserRegistration extends UserDetailsValidation {
         mobileNumber = scanner.next();
         UserDetailsValidation.isValidMobileNumber(mobileNumber);
     }
-    // UC8 - Ability to add Password - Rule4
+    // UC5 to UC8 - Ability to add Password -Rule1 to Rule4
     public static void userPassword() {
         System.out.println("Enter your password");
         password = scanner.next();
