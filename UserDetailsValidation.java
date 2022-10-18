@@ -24,4 +24,14 @@ public class UserDetailsValidation {
             System.out.println("Invalid");
         }
     }
+    public static void isValidEmail(String email) {
+        String regex = "^[a-z]+[+-_.]*[a-z]*[@][a-z]+[.][a-z]{2,4}[.]*([a-z]{2})*$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(email);
+        if (matcher.matches()) {
+            System.out.println("Valid");
+        } else {
+            System.out.println("Invalid");
+        }
+    }
 }
