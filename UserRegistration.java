@@ -40,7 +40,7 @@ public class UserRegistration extends UserDetailsValidation {
         mobileNumber = scanner.next();
         UserDetailsValidation.isValidMobileNumber(mobileNumber);
     }
-    // UC5 - Ability to add Password - Rule1
+    // UC5 - Ability to add Password - Rule2
     public static void userPassword() {
         System.out.println("Enter your password");
         password = scanner.next();
