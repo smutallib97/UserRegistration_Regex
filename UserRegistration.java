@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UserRegistration extends UserDetailsValidation {
     static Scanner scanner = new Scanner(System.in);
-    static String firstName, lastName, email, mobileNumber;
+    static String firstName, lastName, email, mobileNumber, password;
 
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration Problem");
@@ -12,6 +12,7 @@ public class UserRegistration extends UserDetailsValidation {
         userLastName();
         userEmail();
         userMobileNumber();
+        userPassword();
 
     }
 
@@ -38,5 +39,11 @@ public class UserRegistration extends UserDetailsValidation {
         System.out.println("Enter your mobile Number");
         mobileNumber = scanner.next();
         UserDetailsValidation.isValidMobileNumber(mobileNumber);
+    }
+    // UC5 - Ability to add Password - Rule1
+    public static void userPassword() {
+        System.out.println("Enter your password");
+        password = scanner.next();
+        UserDetailsValidation.isValidPassword(password);
     }
 }
